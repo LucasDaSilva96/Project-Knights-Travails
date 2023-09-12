@@ -1,0 +1,31 @@
+{
+  "name": "project-knights-travails",
+  "version": "1.0.0",
+  "description": "This is the Knights Travails assignment from The Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/LucasDaSilva96/Project-Knights-Travails.git"
+  },
+  "author": "Lucas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasDaSilva96/Project-Knights-Travails/issues"
+  },
+  "homepage": "https://github.com/LucasDaSilva96/Project-Knights-Travails#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
