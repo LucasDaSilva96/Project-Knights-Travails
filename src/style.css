@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right,
+    #5842c2,
+    #5449bd,
+    #514eb7,
+    #5053b0,
+    #5057a9,
+    #5462ad,
+    #5a6db0,
+    #6177b2,
+    #708bbf,
+    #81a0cb,
+    #96b4d6,
+    #adc8e1
+  );
+}
+
+h1 {
+  position: absolute;
+  top: 10px;
+}
+
+#board-container {
+  width: 35rem;
+  height: 35rem;
+  border: solid black;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.cell-row {
+  display: flex;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+}
+
+.white {
+  background-color: whitesmoke;
+}
+
+.test {
+  background-image: url("/src/svg-file/knight.svg");
+}
