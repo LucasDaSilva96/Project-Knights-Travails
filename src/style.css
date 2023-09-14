@@ -56,4 +56,6 @@ h1 {
 
 .test {
   background-image: url("/src/svg-file/knight.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
