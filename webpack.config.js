@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Project-Knights-Travails",
+      favicon: "./src/svg-file/knight.svg",
       template: "template.html",
     }),
   ],
