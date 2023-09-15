@@ -32,8 +32,9 @@ h1 {
 }
 
 #board-container {
-  width: 35rem;
-  height: 35rem;
+  position: relative;
+  width: 30rem;
+  height: 30rem;
   border: solid black;
   background-color: black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -54,8 +55,70 @@ h1 {
   background-color: whitesmoke;
 }
 
-.test {
+.knight {
   background-image: url("/src/svg-file/knight.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.msg-box {
+  position: absolute;
+  width: 20rem;
+  height: 10rem;
+  background-color: whitesmoke;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  z-index: 200;
+}
+
+.btn-txt-container {
+  position: absolute;
+  bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 100px;
+  row-gap: 10px;
+  place-content: center;
+}
+
+.start-pos-div,
+.end-pos-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#submitPos,
+#resetPos {
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(109, 236, 131);
+}
+
+#resetPos {
+  background-color: rgb(233, 114, 114);
+}
+
+#submitPos:hover,
+#resetPos:hover {
+  background-color: whitesmoke;
+  color: #000;
+  cursor: pointer;
 }
