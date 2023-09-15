@@ -39,11 +39,8 @@ h1 {
   background-color: black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: grid;
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-}
-
-.cell-row {
-  display: flex;
 }
 
 .cell {
