@@ -2,7 +2,7 @@ const cellNodeList = document.querySelectorAll(".cell");
 
 export function renderKnight(coords) {
   resetCellNodeListClasses();
-  const cells = Array.prototype.slice.call(cellNodeList);
+  const cells = Array.from(cellNodeList);
   const index = cells.findIndex((el) => {
     return el.id === coords;
   });
