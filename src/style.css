@@ -74,11 +74,13 @@ h1 {
   position: absolute;
   width: 20rem;
   height: 10rem;
+  text-align: center;
+  padding: 20px;
   background-color: whitesmoke;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.541) 0px 5px 15px;
   border-radius: 10px;
   z-index: 200;
 }
