@@ -13,6 +13,7 @@ let pathMsg;
 
 const cells = document.querySelectorAll(".cell");
 
+// This is for getting the cell that the user clicked on
 cells.forEach((el) => {
   el.addEventListener("click", function () {
     if (startPos === null) {
@@ -26,6 +27,7 @@ cells.forEach((el) => {
   });
 });
 
+// This is for format the id of the clicked cell
 function splitCellId(id) {
   const idArray = id.split(",");
   idArray[0] = Number(idArray[0]);
@@ -34,20 +36,24 @@ function splitCellId(id) {
   return idArray;
 }
 
+// This is for reloading the page (reset the program)
 function reloadPage() {
   return window.location.reload();
 }
 
+// This is for showing the text message modal
 function showModal(message) {
   modalMsgBox.textContent = message;
   modalContent.classList.remove("hidden");
 }
 
+// This is for hiding the text message modal
 function closeModal() {
   modalContent.classList.add("hidden");
   modalMsgBox.textContent = "";
 }
 
+// Find knight's path
 function findPath() {
   const startPosition = startPos;
   const endPosition = endPos;
@@ -68,7 +74,6 @@ function findPath() {
 
   // Highlight the squares on the path
   for (let pos of pathMsg) {
-    console.log(pos);
     const x = getPath(pos).x;
     const y = getPath(pos).y;
 
@@ -79,7 +84,7 @@ function findPath() {
   }
 }
 
-// Algorithm logic
+// Knight's moves algorithm logic
 const createQueue = () => {
   const elements = [];
 
@@ -115,12 +120,14 @@ const knightFactory = (x, y, distance = null, visited = false, prev = null) => {
   };
 };
 
+// Create 8x8 chessBoard array
 const createGameBoard = () => {
   const chessBoard = new Array(8).fill(null).map(() => new Array(8).fill(null));
 
   return chessBoard;
 };
 
+// This function ensures that the knight can only make moves that are valid within the constraints of the chessboard.
 const getLegalMoves = (knightPosX, knightPosY) => {
   let x = knightPosX;
   let y = knightPosY;
@@ -143,6 +150,7 @@ const getLegalMoves = (knightPosX, knightPosY) => {
   return legalMoves;
 };
 
+// function that implements the logic to find the shortest path that a knight can take from a given starting position to an ending position on a chessboard.
 const knightMoves = (startPos, endPos) => {
   const visited = new Set();
 
@@ -197,6 +205,7 @@ const knightMoves = (startPos, endPos) => {
   return null;
 };
 
+// Get the x and y from the cell-id
 function getPath(arr) {
   let x, y;
 
