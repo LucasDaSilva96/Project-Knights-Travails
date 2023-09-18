@@ -17,6 +17,7 @@ cells.forEach((el) => {
   el.addEventListener("click", function () {
     if (startPos === null) {
       startPos = splitCellId(el.id);
+      renderKnight(el.id);
       startDiv.textContent = `[${startPos}]`;
     } else if (endPos === null) {
       endPos = splitCellId(el.id);
@@ -171,7 +172,7 @@ const knightMoves = (startPos, endPos) => {
       }
       pathMsg[0] = `[${pathMsg[0]}]`;
       const distance = path.length;
-      const message = `Amount of moves: ${distance}, Your path: ${pathMsg}`;
+      const message = `Amount of moves: ${distance},\nYour path: ${pathMsg}`;
       return message;
     } else {
       const checkLegalMoves = getLegalMoves(current.x, current.y);
